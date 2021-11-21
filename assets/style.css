@@ -1,0 +1,138 @@
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+/* css */
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(#ec4036,#770328);
+}
+
+.dropdown {
+    width: 100%;
+    max-width: 410px;
+    margin: 100px auto;
+    transition: 0.3s;
+    position: relative;
+}
+
+.dropdown__select {
+    width: 100%;
+    max-width: 410px;
+    background-color: #f3c3c3;
+    padding: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+.dropdown__list {
+    position: absolute;  
+    width: 100%;
+    max-width: 410px;
+    background-color: #f3c3c3;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    visibility: hidden; /* hides sub-menu */
+    opacity: 0;
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-weight: 200;
+    padding: 20px 30px;
+}
+
+.dropdown-item:first-child {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.dropdown-item:last-child {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.dropdown__item-icon {
+    padding-right: 25px;
+    font-size: 24px;
+    opacity: 1;
+}
+
+.dropdown__item-text {
+    opacity: 1;
+    font-weight: 500;
+}
+
+.dropdown__select:hover {
+    background-color: #fff;
+}
+
+.dropdown-item:hover {
+    background-color: #fff;;
+}
+
+.dropdown:hover .dropdown__list {
+    visibility: visible; /* shows sub-menu */
+    opacity: 1;
+    transition-delay: 0s, 0s, 0.3s;
+}
+
+.dropdown:hover .dropdown__select-icon {
+    display: none;
+}
+
+.dropdown-item:hover .dropdown__item-text {
+    opacity: 0.8;
+}
+
+.fa-facebook-square {
+    color: #0a80ec;
+}
+
+.fa-instagram {
+    color: #dc0038;
+}   
+
+.fa-youtube {
+    color: #fb0003;
+}
+
+.fa-github {
+    color: #000;
+}
+
+.fa-phone {
+    color: green;
+}
+
+@media (max-width: 740px) {
+
+    .container {
+        /* top: -10px; */
+        padding: 20px;
+    }
+
+    .dropdown {
+        margin: 0 auto;
+    }
+}
